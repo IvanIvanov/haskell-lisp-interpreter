@@ -1,0 +1,24 @@
+This project implements a simple Lisp interpreter in Haskell. The interpreter
+is implemented as a pure function and does not support mutation. Unlike the
+Scheme dialect of Lisp the Lisp implemented by this particular interpreter
+does not support lexically scoped closures. Instead dynamic scoping is used.
+
+To compile the source code under Linux run the script:
+
+  ./build.sh
+
+When the source code is compiled an executable called "main" is created
+in the project's bin directory. This executable should be run directly from
+the base directory of the project to ensure that the core libraries written
+in Lisp will be loaded correctly. This can be done by running the script:
+
+  ./run.sh
+
+Similarly to compile under Windows the build.bat and run.bat scripts are
+provided.
+
+The scripts assume that the ghc (Glasgow Haskell Compiler) is already installed
+on the target system and is included in the system path.
+
+Author: Ivan Vladimirov Ivanov (ivan.vladimirov.ivanov@gmail.com)
+
