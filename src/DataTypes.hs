@@ -58,7 +58,7 @@ showPairList Null = ""
 showPairList (Pair first (Null)) = (show first)
 showPairList (Pair first second) = (show first) ++ " " ++ (showPairList second)
 
--- Helper functions to for environment manipulation.
+-- Helper functions for environment manipulation.
 addBinding :: Environment -> String -> Expression -> Environment
 addBinding EmptyEnvironment _ _ = EmptyEnvironment
 addBinding (Environment frame parent) name value = Environment newFrame parent
